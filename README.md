@@ -2,6 +2,10 @@
 
 This is a small, unfinished project for an e-commerce site to publish services or request a service. The backend is built with Laravel, and the frontend is developed using ReactJS. MySQL is used as the database, running on XAMPP in a local environment.
 
+## Information About the team
+
+This project was created by Chami Meriem and Aboura Mohammed Ilyes for our Bachelor's degree. I (Chami Meriem) was responsible for the design and frontend development, while my teammate, Aboura Mohammed Ilyes, handled the backend development.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
