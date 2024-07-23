@@ -1,0 +1,50 @@
+.generated-form {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+  
+form {
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+  }
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input[type='text'],
+  input[type='number'],
+  input[type='email']{
+    width: 250px;
+    padding: 1rem;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+  }
+  
+   button {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid $color-1;
+    border-radius: 3px;
+    background-color: $color-1;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: $black;
+    border-color: $black;
+  }}
+  

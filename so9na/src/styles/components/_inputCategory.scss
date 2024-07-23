@@ -1,0 +1,31 @@
+.Input-category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .Input-category-input {
+        display: flex;
+        flex-direction: row;
+
+        gap: 1rem;
+       input{
+        border: 1px solid #d2d6db;
+        border-radius: 6px;
+        padding: 15px;
+        width: 250px;
+       } 
+    }
+    .Input-category-button {
+      
+        padding: 8px 5px;
+        border-radius: 4px;
+        outline: none;
+        font-size: 14px;
+        width: 50px;
+        font-size: larger;
+        border: 1px solid $color-3;
+        cursor: pointer;
+        margin: 0.2rem 0;
+        
+    }
+}

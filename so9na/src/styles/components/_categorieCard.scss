@@ -1,0 +1,199 @@
+.categorie-card-title {
+    place-items: center;
+    text-align: center;
+    padding-top: 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.Dropdown-card {
+    display: flex;
+        
+    gap: 1rem;
+    margin-top: 3vw;
+    margin-left: 9vw;
+
+.filter-btn {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border: 1px solid $black;
+    border-radius: 2.5vw;
+    width: 50%;
+    cursor: pointer;
+    h4 {
+        color: $black;
+        align-self: center;
+        margin: auto;
+        font-weight: bold;
+    }
+}
+.filter-container-browse{
+    margin: 0 auto;
+    display: block;
+}
+.filter-container-browse.inactive{
+    display: none;
+}
+}
+
+.wrapper {
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 19rem));
+    gap: 2rem;
+    margin: 3rem 8rem;
+    justify-content: center;
+    .categorie-card {
+        overflow: hidden;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 200ms ease-in;
+        .card-links {
+            text-decoration: none;
+        }
+
+        .card-image {
+            height: 14rem;
+            width: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .profil-Detail {
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem;
+
+            .img-container {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+                }
+            }
+            .userName {
+                margin-top: 1rem;
+                font-weight: 200;
+                font-size: 1rem;
+                margin-bottom: 5px;
+                color: $black;
+                cursor: pointer;
+            }
+           
+            .userName:hover{
+                color: $color-3;
+            }
+        }
+        .card-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 0.7rem;
+            margin-bottom: 0.5rem;
+
+            .card-description {
+                color: $black;
+                font-size: 1rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .card-prize {
+                color: $black;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+    .page-num {
+        padding: 0.5rem 0.9rem;
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: 400;
+    }
+
+    .page-num:hover {
+        background-color: $color-1;
+    }
+
+    .active {
+        background-color: $color-1;
+    }
+}
+
+.breadCrumbs {
+    max-width: 50rem;
+    margin: 2rem auto;
+}
+.breadCrumbs > * {
+    display: inline-block;
+    margin-right: 2rem;
+}
+.crumb:after {
+    content: ">";
+    margin-left: 1rem;
+    color: $black;
+}
+.crumb:last-child:after {
+    display: none;
+}
+.crumb a {
+    color: $black;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .Dropdown-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 13rem));
+        gap: 1rem;
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 15rem));
+    }
+}
+@media screen and (max-width: 700px) {
+    .Dropdown-card {
+    .filter-btn {
+        
+        padding: 0.5rem 1rem;
+        border-radius: 5vw;
+    
+        h4 {
+            font-size: 14px;
+            color: $black;
+            align-self: center;
+            margin: auto;
+            font-weight: bold;
+        }
+        .filter-icon{
+            font-size: 13px;
+        }
+    }}
+}

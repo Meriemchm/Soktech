@@ -1,0 +1,228 @@
+.browse-container {
+    .browse-title-description {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        place-items: center;
+        text-align: center;
+        padding-top: 3rem;
+        h2 {
+            font-weight: 500;
+            font-size: 2.5rem;
+        }
+        p {
+            padding: 0 1rem;
+            font-size: larger;
+        }
+    }
+    .Dropdown-browse {
+        display: flex;
+
+        gap: 1rem;
+        margin-top: 3vw;
+        margin-left: 9vw;
+    }
+    .filter-btn {
+        display: flex;
+        gap: 0.5rem;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        border: 1px solid $black;
+        border-radius: 2.5vw;
+        width: auto;
+        cursor: pointer;
+        h4 {
+            color: $black;
+            align-self: center;
+            margin: auto;
+            font-weight: bold;
+        }
+    }
+    .filter-container-browse {
+        display: block;
+    }
+    .filter-container-browse.inactive {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+    .browse-cards-container {
+        user-select: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 22rem));
+        gap: 2rem;
+        justify-content: center;
+        margin: 3vw 5vw;
+       
+        .browse-card-container {
+            max-height: 20rem;
+            background: $white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 350px;
+            padding: 1vw;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            overflow: hidden;
+         
+
+            .browse-colomn {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                width: 100%;
+                justify-content: space-between;
+                .browse-row {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    .img-container {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+                        }
+                    }
+                    .userName {
+                        margin-top: 1rem;
+                        font-weight: 200;
+                        font-size: 1rem;
+                        margin-bottom: 5px;
+                        color: $black;
+                        cursor: pointer;
+                    }
+
+                    .userName:hover {
+                        color: $color-3;
+                    }
+                    span {
+                        font-weight: bolder;
+                    }
+                }
+                .browse-description {
+                    white-space: wrap;
+                    cursor: pointer;
+                }
+            }
+            .browse-categories {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                flex-wrap: wrap;
+
+                .browse-category {
+                    background: $black;
+                    padding: 0.3rem 1rem;
+                    border: 1px solid $black;
+                    border-radius: 2.5vw;
+                    width: auto;
+
+                    p {
+                        color: $white;
+                        align-self: center;
+                        margin: auto;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+       
+    }
+}
+.Chargement-en-cours {
+    margin: 20rem 2.5rem;
+    text-align: center;
+}
+
+@media (max-width: 1220px) {
+    .browse-container {
+        .browse-cards-container {
+            justify-content: center;
+            .browse-card-container {
+                align-items: center;
+                .browse-colomn {
+                    .browse-categories {
+                        gap: 0.5rem;
+                        .browse-category {
+                            padding: 0.3rem 0.5rem;
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .browse-container {
+        .browse-title-description {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+        .filter-btn {
+            padding: 0.3rem 0.5rem;
+
+            h4 {
+                font-size: 18px;
+                color: $black;
+                align-self: center;
+                margin: auto;
+                font-weight: bold;
+            }
+            .filter-icon {
+                font-size: 14px;
+            }
+        }
+        .browse-cards-container {
+            margin: 1rem auto;
+            justify-content: center;
+        .browse-card-container {
+            gap: 3vw;
+            padding: 0.5rem;
+            .browse-image {
+                img {
+                    height: 20vw; 
+                    width: 20vw; 
+                }
+            }
+
+            .browse-colomn {
+                gap: 3vw;
+                padding: 0.5rem; 
+                .browse-row {
+                    gap: 1vw; 
+                    .userName{
+                        font-size: 18px;
+                    }
+                }
+                .browse-description {
+                    font-size: 18px;
+                }
+                .browse-categories {
+                    gap: 0.2rem;
+                    .browse-category {
+                        padding: 0.3rem 0.5rem;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }}
+}

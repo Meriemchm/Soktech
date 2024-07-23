@@ -1,0 +1,52 @@
+.Form-order-service {
+    margin: 5rem 5rem;
+    background: $white;
+    border: 1px solid $color-5;
+    padding: 2rem;
+    max-width: 80%;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .Form-order-title {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .button-order-validate {
+        font-weight: bold;
+        line-height: 19px;
+        background: $color-1;
+        border: 1px solid $color-1;
+        padding: 15px 25px;
+        border-radius: 6px;
+        color: white;
+        width: 30%;
+    }
+    .button-order-validate:hover {
+        background-color: transparent;
+        color: $black;
+        border: 1px solisd $color-1;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .Form-order-service {
+        margin: 5rem auto;
+        padding: 2rem 0.9rem;
+        .button-order-validate {
+            align-self: center;
+            width: 70%;
+        }
+    }
+
+    .Form-order-title {
+        font-size: 1.2rem;
+    }
+    .more-information-Skills,
+    .more-information-diplome {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,128 @@
+.notification-container {
+    margin-top: 8rem;
+    margin-right: 10px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        transform: translate(-1rem, -100%);
+        border-left: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+        border-bottom: 0.75rem solid white;
+    }
+
+    cursor: default;
+    z-index: 999;
+    width: 400px;
+    height: 25rem;
+    font-weight: 300;
+    background: white;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+    overflow: hidden;
+    overflow-y: scroll;
+    .notification-title {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        h3 {
+            text-transform: uppercase;
+            font-size: 75%;
+            font-weight: 700;
+            color: $color-3;
+            padding: 0.75rem * 2 0.75rem;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+          }
+    }
+    .notification-title.has-unread {
+        position: relative;
+      }
+      
+      .notification-title.has-unread .notification-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+      }
+
+    .notification-list {
+
+        li {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            padding: 1.2rem;
+            border-bottom: 1px solid $color-5;
+        }
+
+        .notification-list-image {
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .notification-list-information {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.2rem;
+
+            p {
+                font-size: 16px;
+            }
+            h5 {
+                align-self: flex-start;
+            }
+        }
+    }
+    h4 {
+        margin-top: 30%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: $color-3;
+        display: flex;
+        justify-content: center;
+    }
+
+    animation-name: dropPanel;
+    animation-iteration-count: 1;
+    animation-timing-function: all;
+    animation-duration: 0.75s;
+}
+
+@keyframes dropPanel {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scaleY(0.5);
+    }
+}
+
+.notification {
+    box-sizing: border-box;
+    height: 50%;
+    &.new {
+        background: #e6e9eb;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .notification-container {
+
+        margin-right: -60px;
+    }
+}

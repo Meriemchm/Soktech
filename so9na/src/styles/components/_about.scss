@@ -1,0 +1,58 @@
+.About {
+    margin: 0 5rem;
+    padding: 1rem 0;
+    .about-text {
+        margin: auto 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.5rem;
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 18px;
+            color: rgb(78, 74, 74);
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .About {
+        margin: 0 1rem;
+        justify-content: center;
+        .about-container {
+            align-items: center;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            gap: 3rem;
+            .about-images {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                .first-image {
+                    img {
+                        width: 300px;
+                        height: 207px;
+
+                        object-fit: cover;
+                    }
+                }
+
+                .about-image {
+                    display: flex;
+                    flex-direction: row;
+                    img {
+                        width: 150px;
+                        height: 120px;
+
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

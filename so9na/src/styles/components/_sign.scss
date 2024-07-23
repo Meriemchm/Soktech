@@ -1,0 +1,229 @@
+.Sign {
+    background: rgb(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+
+    .box {
+        z-index: 99;
+        position: absolute;
+        width: 100%;
+        max-width: 500px;
+        height: 640px;
+        background-color: $white;
+        border-radius: 3.3rem;
+        box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+        margin: 5rem auto;
+        top: calc(1% - 3rem);
+        left: 33%;
+    }
+    .box.active {
+        display: none;
+    }
+
+    .inner-box {
+        position: absolute;
+        width: calc(100% - 2rem);
+        height: calc(100% - 4.1rem);
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+
+    .forms-wrap {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        left: -10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        transition: 0.8s ease-in-out;
+        form {
+            max-width: 260px;
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: opacity 0.02s 0.4s;
+        }
+    }
+    .form-errors {
+        p {
+            color: red;
+            font-size: 0.9rem;
+        }
+    }
+
+    .form-icon {
+        display: block;
+        position: absolute;
+        top: -5%;
+        right: 30%;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        .fa-times {
+            color: $black;
+            font-size: 2rem;
+        }
+    }
+
+    .heading h2 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        color: $black;
+    }
+
+    .heading h6 {
+        color: #bababa;
+        font-weight: 400;
+        font-size: 0.75rem;
+        display: inline;
+    }
+
+    .link {
+        color: $black;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .link:hover {
+        color: $color-1;
+    }
+
+    .input-wrap {
+        position: relative;
+        height: 37px;
+        margin-bottom: 2rem;
+    }
+
+    .input-field {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #bbb;
+        padding: 0;
+        font-size: 0.95rem;
+        color: $black;
+        transition: 0.4s;
+        left: 0;
+    }
+
+    label {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.95rem;
+        color: #bbb;
+        pointer-events: none;
+        transition: 0.4s;
+    }
+
+    .sign-btn {
+        display: inline-block;
+        width: 100%;
+        height: 43px;
+        background-color: $black;
+        color: $white;
+        border: 1px solid $black;
+        cursor: pointer;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .sign-btn:hover {
+        color: $black;
+        border: 1px solid $black;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Sign {
+        height: 100%;
+
+        .box {
+            height: 540;
+            max-width: 400px;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+        }
+
+        .inner-box {
+            position: static;
+            transform: none;
+            width: revert;
+            height: revert;
+            padding: 2rem 0;
+        }
+
+        .forms-wrap {
+            position: revert;
+            width: 100%;
+            height: auto;
+        }
+
+        form {
+            max-width: revert;
+            padding: 1.5rem 2.5rem 2rem;
+            transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+        }
+
+        .heading {
+            margin: 2rem 0;
+        }
+
+        form.sign-up-form {
+            transform: translateX(100%);
+        }
+
+        .Sign.sign-up-mode form.sign-in-form {
+            transform: translateX(-100%);
+        }
+
+        form.sign-up-form {
+            transform: translateX(0%);
+        }
+        .form-icon {
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .Sign {
+        min-height: 100%;
+
+        .box {
+            border-radius: 2rem;
+            max-width: 300px;
+            height: 540px;
+        }
+
+        .inner-box {
+            padding: 0;
+        }
+
+        form {
+            padding: 1rem 2rem 1.5rem;
+        }
+    }
+}

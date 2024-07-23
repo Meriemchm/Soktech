@@ -1,0 +1,135 @@
+/* .slider {
+    
+    background: url(presentation1.jpg);
+    animation: slide 30s infinite;
+} */
+.Presentation {
+    margin: 0 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $color-6;
+    .Presentation-container {
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: row;
+        border-radius: 1rem;
+        background: #008f8d18;
+        box-shadow: 0 2px 20px rgba(44, 135, 151, 0.2);
+        padding: 0 1rem;
+        gap: 2rem;
+        .container {
+            flex-wrap: wrap;
+            margin: 1rem auto;
+            border-radius: 1rem;
+            background: $white;
+            box-shadow: 0 2px 20px rgba(44, 135, 151, 0.2);
+            padding: 1rem;
+            gap: 2rem;
+            width: auto;
+
+            img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+            .overlay {
+                margin: auto;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+
+                p {
+                    color: rgb(88, 86, 86);
+                    line-height: 20px;
+                    max-width: 300px;
+                }
+            }
+
+            .button {
+                margin-top: 1rem;
+                text-align: center;
+
+                button {
+                    border: 1px solid $color-1;
+                    background: $color-1;
+                    color: $white;
+                    font-size: large;
+                    padding: 10px 50px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                button:hover {
+                    border-color: black;
+                    background: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 895px) {
+    .Presentation {
+        margin: 0 1rem;
+        justify-content: center;
+        .Presentation-container {
+            .container {
+                justify-content: center;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .Presentation {
+        margin: 0 1rem;
+        justify-content: center;
+        .Presentation-container {
+            .container {
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .Presentation {
+        margin: 0 1rem;
+        justify-content: center;
+        .Presentation-container {
+            .container {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// @keyframes slide {
+//     0% {
+//         background: url(presentation3.jpg);
+//     }
+//     10% {
+//         background: url(presentation4.jpg);
+//     }
+//     25% {
+//         background: url(presentation5.jpg);
+//     }
+//     50% {
+//         background: url(presentation3.jpg);
+//     }
+//     75% {
+//         background: url(presentation4.jpg);
+//     }
+//     100% {
+//         background: url(presentation5.jpg);
+//     }
+// }
+// @media screen and (max-width: 960px) {
+// }

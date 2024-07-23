@@ -1,0 +1,26 @@
+.breadCrumbs {
+    margin: 2rem 2rem;
+}
+.breadCrumbs > * {
+    display: inline-block;
+}
+.crumb {
+    content: ">";
+    margin: 0 0.5rem;
+}
+
+.crumb:last-child:after {
+    display: none;
+}
+.crumb:last-child a {
+    color: $black;
+}
+.crumb a {
+    color: $color-4;
+}
+
+@media screen and (min-width: 960px) {
+    .breadCrumbs {
+        margin: 5rem 8rem;
+    }
+}

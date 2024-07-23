@@ -1,0 +1,35 @@
+.admin-form-container{
+    position: absolute;
+    align-items: start;
+    text-align: start;
+    top: 0;
+    left: 0;
+    margin: 8rem 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .admin-form-table{
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+          
+            th, td,tr {
+              padding: 1rem;
+              border: 1px solid #dee2e6;
+              text-align: left;
+            }
+          
+            th {
+              font-weight: bold;
+              background-color: #f2f2f2;
+              
+            }
+          
+            tr{
+              padding: 5rem 2rem ;
+            }
+          }
+          
+    }
+}

@@ -1,0 +1,254 @@
+.service-list {
+    display: block;
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 19rem));
+
+    gap: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+
+    .service-container {
+        overflow-y: scroll;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        transition: transform 200ms ease-in;
+        position: relative;
+        height: 450px;
+
+        .service-images-container {
+            position: relative;
+            .service-image-list {
+                height: 13rem;
+                width: 100%;
+                object-fit: cover;
+            }
+            .btn-modif-service-image {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 20px;
+                transform: translatey(15%);
+                z-index: 1;
+                text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+            }
+            .service-link {
+                position: absolute;
+                cursor: pointer;
+                text-decoration: none;
+                color: $black;
+                transform: translate(5%, 50%);
+                font-size: 5rem;
+                color: transparent;
+            }
+        }
+
+        .service-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            padding: 0.7rem;
+
+            .service-description {
+                color: $black;
+                font-size: 1rem;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: relative;
+                height: 50%;
+
+                textarea {
+                    resize: none;
+                    height: 100%;
+                    width: 100%;
+                    padding: 0.8rem;
+                }
+                .btn-group-description {
+                    position: absolute;
+                    top: 0;
+                    right: 10%;
+                    transform: translateY(-0%);
+                    z-index: 1;
+                    padding: auto;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 14px;
+                    width: 24px;
+                    color: $white;
+                    background: $color-3;
+                    border: 1px solid $color-3;
+                    cursor: pointer;
+                }
+                .btn-group-description-two {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(-0%);
+                    z-index: 1;
+                    padding: auto;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 14px;
+                    width: 24px;
+                    color: $white;
+                    background: $color-3;
+                    border: 1px solid $color-3;
+                    cursor: pointer;
+                }
+                .btn-modif-service-description {
+                    position: absolute;
+
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-35%);
+
+                    z-index: 1;
+                }
+            }
+
+            .service-prize {
+                color: $black;
+                .btn-group-prize {
+                    padding: auto;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 14px;
+                    width: 24px;
+                    color: $white;
+                    background: $color-3;
+                    border: 1px solid $color-3;
+                    cursor: pointer;
+                    margin: 0 0.2rem;
+                }
+            }
+        }
+        .btn-spprime-service {
+            position: absolute;
+            border: none;
+            background: none;
+            font-weight: bold;
+            padding: 0 0.3rem;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: end;
+            z-index: 1;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+        }
+        .btn-modif-service {
+            border: none;
+            background: none;
+            font-weight: bold;
+            padding: 0 0.3rem;
+            cursor: pointer;
+        }
+
+        .checkbox-categories .checkbox-category {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            margin-top: 0.3rem;
+            label {
+                font-size: 13px;
+            }
+        }
+        .category-span {
+            display: flex;
+            gap: 0.5rem;
+            .btn-supp-category {
+                margin-top: -0.2rem;
+                border: 0.5px solid rgb(202, 27, 27);
+                background: none;
+                font-weight: bold;
+                text-align: center;
+                font-size: 15px;
+                padding: 0 0.5rem;
+                border-radius: 3rem;
+                color: rgb(202, 27, 27);
+                cursor: pointer;
+            }
+            .btn-supp-category:hover {
+                transform: scale(1.1);
+            }
+        }
+        .btn-group {
+            padding: auto;
+            border-radius: 4px;
+            outline: none;
+            font-size: 14px;
+            width: 24px;
+            text-align: center;
+            color: $white;
+            background: $color-3;
+            border: 1px solid $color-3;
+            cursor: pointer;
+            margin: 0.2rem 0.2rem;
+        }
+        .btn-group-ajouter {
+            padding: 8px 20px;
+            background: $black;
+            width: 150px;
+            margin: 0.2rem auto;
+        }
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+    .add-service {
+        .add-service-button:before {
+            content: "+";
+            font-weight: 300;
+            font-size: 40px;
+        }
+        .add-service-button {
+            display: block;
+            color: $black;
+            height: 450px;
+            padding: 118px 109px;
+            background: none;
+            border: 1px solid #dadbdd;
+            border-radius: 4px;
+            cursor: pointer;
+            .create-service-text {
+                align-self: center;
+                color: $color-4;
+                font-size: 11.3px;
+                font-weight: 200;
+            }
+        }
+    }
+    .add-service.inactive {
+        display: none;
+    }
+}
+.service-list-visit {
+    .service-container {
+        height: 320px;
+        overflow-y: hidden;
+        .service-detail {
+            .service-description {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+.service-list.inactive {
+    display: none;
+}
+@media (max-width: 1400px) {
+    .service-list {
+        justify-content: center;
+    }
+}
+@media (max-width: 1299px) {
+    .service-list {
+        justify-content: start;
+    }
+}

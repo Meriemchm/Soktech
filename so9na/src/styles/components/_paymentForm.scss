@@ -1,0 +1,64 @@
+/**card Payment**/
+.PaymentForm {
+    .card-payment {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .form-order-service {
+   label {
+        color: $color-3;
+        font-size: 16px;
+        line-height: 2.5rem;
+    }
+   input {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d2d6db;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+       
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }}
+    .card-payment-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        .a input {
+            width: 8rem;
+            height: 3rem;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    .order-card-user {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+@media screen and (max-width: 960px) {
+    .PaymentForm {
+        .card-payment {
+            gap: 1rem;
+        }
+        .card-payment {
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        .order-card-user {
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    }
+}

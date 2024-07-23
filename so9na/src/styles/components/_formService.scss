@@ -1,0 +1,34 @@
+.form-service {
+    background: $white;
+    border: 1px solid $color-3;
+    margin: 5rem 5rem;
+    max-width: 80%;
+
+    .button-add-services {
+        display: flex;
+        justify-content: flex-end;
+        input.button-add-service {
+            font-weight: bold;
+            background: $color-1;
+            border: 1px solid $color-1;
+            padding: 15px 25px;
+            border: 1px solid $color-1;
+            border-radius: 6px;
+            color: white;
+            max-width: 100%;
+            cursor: pointer;
+        }
+        .button-add-service:hover {
+            background-color: transparent;
+            color: $black;
+            border: 1px solid $color-1;
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .form-service {
+        margin: 5rem auto;
+    }
+}

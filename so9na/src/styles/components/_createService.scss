@@ -1,0 +1,98 @@
+.LinaerStepper {
+    margin: 3rem 5rem;
+    background-color: $white;
+    border: 1px solid $color-5;
+    max-width: 80%;
+    .stepper-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: end;
+        padding: 2rem;
+        
+    }
+    .stepper-button {
+        
+        font-weight: bold;
+        background: $color-1;
+        border: 1px solid $color-1;
+        padding: 1rem 1.5rem;
+        border-radius: 0.4rem;
+        font-size: 16px;
+        color: white;
+    
+    }
+    .stepper-button:hover {
+        background-color: transparent;
+        color: $black;
+        border: 1px solid $color-1;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+    }
+}
+.Payment-step {
+    padding: 4rem 5rem;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .Payment-step-title {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+.more-information {
+    padding: 4rem 5rem;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .more-information-title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .more-information-Skills,
+    .more-information-diplome {
+        display: flex;
+        flex-direction: row;
+    }
+    label {
+        color: $color-3;
+        font-size: 16px;
+        line-height: 2.5rem;
+    }
+    .more-information-Skills {
+        gap: 3rem;
+    }
+    .more-information-diplome {
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .LinaerStepper {
+        margin: 5rem auto;
+    }
+    .more-information {
+        padding: 2rem 1rem;
+        .more-information-title {
+            font-size: 1.2rem;
+        }
+        .more-information-Skills,
+        .more-information-diplome {
+            flex-direction: column;
+        }
+        .more-information-Skills {
+            gap: 1rem;
+        }
+        .more-information-diplome {
+            gap: 1rem;
+        }
+    }
+    .Payment-step {
+        padding: 2rem 0.9rem;
+        .Payment-step-title {
+            font-size: 1.2rem;
+        }
+    }
+}
